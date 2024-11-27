@@ -1,0 +1,61 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Parent container: Ensure the editor takes full space */
+.editor-container {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative; /* Prevent unwanted centering behavior */
+}
+
+/* CodeMirror root */
+.CodeMirror {
+  height: 100% !important;
+  width: 100% !important;
+  line-height: 1.5 !important; /* Set a reasonable line height */
+  overflow: auto !important;
+  display: block !important; /* Ensure it’s treated as a block element */
+}
+
+/* Prevent vertical alignment issues */
+.CodeMirror-lines {
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: left !important; /* Force text alignment to the left */
+  display: block !important;
+}
+
+/* Scrolling container for CodeMirror */
+.CodeMirror-scroll {
+  height: 100% !important;
+  overflow-y: auto !important;
+}
+
+/* Remove any unwanted centering of the content */
+textarea {
+  vertical-align: top !important; /* Ensure the content starts from the top */
+}
+
+/* Optional: Gutter styling for line numbers */
+.CodeMirror-gutters {
+  background: #282a36 !important; /* Match Dracula theme */
+  border-right: 1px solid #44475a !important;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
