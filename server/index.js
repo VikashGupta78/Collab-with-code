@@ -6,6 +6,16 @@ const { Server } = require("socket.io");
 const ACTIONS = require('../src/Actions');
 const io = new Server(server);
 
+const mongoose = require('mongoose');
+const cors = require('cors');
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+require('./config.js/db'); // Adjust path accordingly
+
+
 app.get('/', (req, res) => {
   res.send("webSocket is running fine");
 });
